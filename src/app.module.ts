@@ -14,6 +14,10 @@ import { MongooseModule } from '@nestjs/mongoose';
     }),
     MongooseModule.forRoot(
       `mongodb://${process.env.DB_HOST}/${process.env.DB_NAME}`,
+      {
+        useCreateIndex: true,
+        useNewUrlParser: true,
+      },
     ),
   ],
   controllers: [AppController],
