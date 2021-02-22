@@ -44,7 +44,7 @@ export class AppController {
     type: AccessToken,
   })
   @ApiBearerAuth()
-  @ApiBody({ type: [CreateUserDto] })
+  @ApiBody({ type: CreateUserDto })
   async login(@Request() req) {
     return this.authService.login(req.user);
   }
